@@ -4,74 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <title>html</title>
-    <style>
-        /* ОБЩИЕ СТИЛИ  */
-        body {
-            margin: 0px;
-            background-color: rgba(245, 206, 230, 0.37)
-        }
-
-        header {
-            background-color: #fac4e5;
-            padding: 25px;
-        }
-
-        main {
-            background-color: #fff0fc;
-            padding: 25px;
-        }
-
-        footer {
-            background-color: #ffafda;
-            color: deeppink;
-            padding: 25px;
-        }
-
-        /*ИНДИВИДУАЛЬНЫЕ СТИЛИ*/
-        h1 {
-            margin: 0;
-        }
-
-        p {
-            margin: 0;
-        }
-
-        img {
-            width: 800px;
-            height: auto;
-        }
-
-        a {
-            margin: auto;
-            display: block;
-            background-color: azure;
-            text-align: center;
-            max-width: 200px;
-            border-radius: 25px;
-            padding: 15px;
-            text-decoration: none;
-            color: black;
-        }
-        a:hover{
-            background-color: cornflowerblue;
-        }
-    </style>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/menu.css">
 </head>
 
 <body>
     <!-- ШАПКА -->
     <header>
-        <h1> HTML и CSS </h1>
+        <div id="menu">
+            <h1> HTML и CSS </h1>
+            <a href="task1.html" class="header-a">Задача №1</a>
+            <a href="article.html" class="header-a">Статья №1</a>
+        </div>
+
         <hr>
     </header>
     <!-- ОСНОВНОЙ -->
     <main>
         <img src="https://www.interviewbit.com/blog/wp-content/uploads/2021/10/HTML-and-CSS-768x453.png">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing. Architecto amet soluta laudantium. Ducimus id nostrum reiciendis velit, ad enim nemo, alias animi minus est dolore veniam iusto provident explicabo, tempore ipsum voluptatem adipisci cumque, natus. <br> Exercitationem omnis, ducimus dignissimos consectetur aliquid vitae voluptates cum recusandae.</p>
-        <a href="article.html">статья</a>
+        <a href="article.html" id="main-a">статья</a>
     </main>
     <!-- ПОДВАЛ -->
     <footer>
         Мой телефон: 8 800 555 35 35
     </footer>
-</body></html>
+</body>
+
+</html>

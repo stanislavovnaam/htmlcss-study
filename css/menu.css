@@ -1,0 +1,13 @@
+.header-a {
+    display: block;
+    text-decoration: none;
+    background-color: aliceblue;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    margin: 0px 10px
+}
+
+.header-a:hover {
+    background-color: blueviolet;
+}
