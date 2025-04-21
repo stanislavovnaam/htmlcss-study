@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: burlywood;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ol {
+            margin: 0;
+        }
+
+        header {
+            background-color: antiquewhite;
+            border-bottom-style: solid;
+            border-bottom-width: 5px;
+            border-bottom-color: darkgoldenrod;
+            padding: clamp(6px, 1.5vw, 18px);
+        }
+
+        header h1 {
+            font-size: clamp(22px, 4vw, 35px);
+        }
+
+        main {
+            background-color: cornsilk;
+            padding: clamp(8px, 2vw, 28px);
+            max-width: 800px;
+            margin: auto;
+        }
+
+        main h2 {
+            margin: clamp(6px, 2vw, 18px) 0px;
+            font-size: clamp(18px, 3vw, 26px);
+        }
+
+        main h3 {
+            margin: clamp(6px, 1.5vw, 16px) 0px;
+            font-size: clamp(16px, 2.8vw, 21px);
+        }
+
+        main h4 {
+            margin: clamp(6px, 1.25vw, 14px) 0px;
+            font-size: clamp(15px, 2.5vw, 18px);
+        }
+
+        main p,
+        main ol,
+        main a {
+            margin: clamp(6px, 1.25vw, 14px) 0px;
+            font-size: clamp(14px, 2vw, 16px);
+        }
+
+        main img {
+            width: 100%;
+        }
+
+        #img1 {
+            width: 300px;
+        }
+
+        .frame-img {
+            border-style: double;
+            border-width: 7px;
+            border-color: gray;
+        }
+
+        footer {
+            background-color: burlywood;
+            padding: clamp(6px, 3vw, 30px);
+            text-align: center;
+            border-top-style: solid;
+            border-top-width: 5px;
+            border-top-color: darkgoldenrod;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ШАПКА -->
+    <header>
+        <h1>Теория Неделя №1-2 (Уроки 1-8)</h1>
+    </header>
+
+    <!-- ОСНОВНАЯ -->
+    <main>
+        <!-- Заголовок -->
+        <h2>Парные и Одиночые Теги</h2>
+
+        <!-- Содержимое -->
+        <ol>
+            <li>
+                <p>Парные теги, необходмо закрывать:</p>
+                <ol>
+                    <li>&lt;h1-h6&gt;: теги заголовков.</li>
+                    <li>&lt;p&gt;: тег абзаца.</li>
+                    <li>&lt;a&gt;: тег ссылки.</li>
+                </ol>
+            </li>
+            <li>
+                <p>Одиночные теги, закрываются сами:</p>
+                <ol>
+                    <li>&lt;br&gt;: тег новой строки.</li>
+                    <li>&lt;hr&gt;: тег горизонтальной линии.</li>
+                    <li>&lt;img&gt;: тег изображения.</li>
+                </ol>
+            </li>
+        </ol>
+
+        <!-- ПРИМЕРЫ -->
+        <h3>Парные:</h3>
+
+        <p>Абзац ("Параграф") &lt;p&gt;: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatum, dolorem blanditiis optio. Sequi debitis rerum hic dicta error?</p>
+
+        <h4>Заголовок &lt;h4&gt;: Lorem ipsum dolor sit.</h4>
+        <a href="https://w3schools.com" target="_blank">Ссылка на "w3schools".</a>
+
+        <!-- ПРИМЕРЫ -->
+        <h3>Одиночные:</h3>
+
+        <p>Картинка &lt;img&gt;:</p>
+        <img src="https://t4.ftcdn.net/jpg/05/17/53/57/360_F_517535712_q7f9QC9X6TQxWi6xYZZbMmw5cnLMr279.jpg" alt="">
+        <p>Переход на новую строку &lt;br&gt;, использованные в абзаце &lt;p&gt;, и горизонтальная линия &lt;hr&gt;:</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            <br>
+            <br>
+            Laudantium dolorum sunt sequi rem quibusdam odio?
+        </p>
+
+        <hr>
+
+        <!-- НОВЫЙ ЗАГОЛОВОК 2 -->
+        <h2>Блочные и Строчные Элементы</h2>
+
+        <!-- Содержимое -->
+        <ol>
+            <li>
+                <p>Блочные теги, переходят на новую строку и занимают её полностью:</p>
+                <ol>
+                    <li>&lt;h1-h6&gt;: теги заголовков.</li>
+                    <li>&lt;p&gt;: тег абзаца.</li>
+                    <li>&lt;ol&gt; и &lt;ul&gt;: нумерованные и маркированные списки.</li>
+                    <li>&lt;li&gt;: пункт списка.</li>
+                    <li>&lt;header&gt;,&lt;main&gt; и &lt;footer&gt;: семантические контейнеры.</li>
+                    <li>&lt;nav&gt;: навигационный блок.</li>
+                    <li>&lt;hr&gt;: тег горизонтальной линии.</li>
+                </ol>
+            </li>
+            <li>
+                <p>Строчные теги, не переходят на новую строку и занимают только нужную им ширину (по содержимому):</p>
+                <ol>
+                    <li>&lt;br&gt;: тег новой строки.</li>
+                    <li>&lt;img&gt;: тег изображения.</li>
+                    <li>&lt;a&gt;: тег ссылки.</li>
+                </ol>
+            </li>
+        </ol>
+
+        <!-- ПРИМЕРЫ 1-->
+        <h3>Пример:</h3>
+
+        <a href="">Тест Ссылка 1</a>
+        <p>Заметим, что этот абзац &lt;p&gt; начинается с новой строки и выталкивает ссылку после него на новую строчку, хотя в HTML они все расположены на одной строке. Это значит тег &lt;p&gt; блочный.</p> <a href="">Тест Ссылка 2</a>
+
+        <!-- ПРИМЕРЫ 2-->
+        <p>Далее заметим, что эти ссылки находится в одну строчку, хотя в HTML они на разных строках. Это значит тег &lt;a&gt; строчный.</p>
+        <a href="">| Тест Ссылка 1 |</a>
+
+        <a href="">| Тест Ссылка 2 |</a>
+
+        <a href="">| Тест Ссылка 3 |</a>
+
+        <!-- НОВЫЙ ЗАГОЛОВОК №3 -->
+        <h3>Изменения поведения через CSS:</h3>
+        <p>Является ли блок строчным или блочным можно поменять через свойство display в CSS.</p>
+        <ol>
+            <li>"display: block" - превратит элемент в блочный</li>
+            <li>"display: inline" - превратит элемент в строчный</li>
+            <li>"display: inline-block" - превратит элемент в строчно-блочный, что превратит его в блок, но не будет занимать всю строчку.</li>
+        </ol>
+        <!-- КОНЕЦ -->
+
+        <!-- НОВЫЙ ЗАГОЛОВОК 2 -->
+        <h2>Стилизация CSS и Атрибуты Тегов</h2>
+
+        <!-- СОДЕРЖИМОЕ -->
+        <p>Глобальные Атрибуты:</p>
+        <ol>
+            <li>id: Уникальный идентификатор элемента.</li>
+            <li>class: Класс элемента (для CSS и JavaScript).</li>
+            <li>style: Встроенные CSS-стили.</li>
+            <li>title: Подсказка при наведении курсора.</li>
+        </ol>
+        <p>Атрибуты для &lt;img&gt;:</p>
+        <ol>
+            <li>src: Путь к изображению.</li>
+            <li>alt: Альтернативный текст, поясняет что находится в изображение (нужно для SEO, ботов и программ чтения с экрана).</li>
+            <li>width: Ширина изображения, которую можно настроить напрямую, без CSS.</li>
+            <li>height: Высота изображения, которую можно настроить напрямую, без CSS.</li>
+        </ol>
+        <p>Атрибуты для &lt;a&gt;:</p>
+        <ol>
+            <li>href: Адрес перехода.</li>
+            <li>target: Где открыть ссылку (_blank, _self).</li>
+            <li>download: Скачать файл по ссылке, работает только с одного и того же домена.</li>
+        </ol>
+
+        <!-- ПРИМЕРЫ -->
+        <h3>Пример использования атрибутов:</h3>
+
+        <!-- ПРИМЕРЫ 1 -->
+        <p>Изображение, которое использует атрибуты src, alt, id, class, title. </p>
+        <img src="https://t4.ftcdn.net/jpg/05/17/53/57/360_F_517535712_q7f9QC9X6TQxWi6xYZZbMmw5cnLMr279.jpg" alt="изображение заполнитель." id="img1" class="frame-img" title="Картинка &lt;img&gt;!">
+
+        <!-- ПРИМЕРЫ 2 -->
+        <p>Ссылка, которое использует атрибуты src, alt, id, class, title. </p>
+        <p>Lorem ipsum <a href="https://w3schools.com" target="_blank">w3schools</a> dolor sit amet.</p>
+
+
+        <!-- НОВЫЙ ЗАГОЛОВОК 3 -->
+        <h3>Стилизация CSS:</h3>
+        <p>Свойства:</p>
+        <ol>
+            <li>color: Цвет текста.</li>
+            <li>background-color: Цвет фона.</li>
+            <li>margin: Внешние отступы.</li>
+            <li>padding: Внутренние отступы.</li>
+
+            <li>width: Цвет текста.</li>
+            <li>height -color: Цвет фона.</li>
+            <li>font-family: Внешние отступы.</li>
+            <li>font-size: Внутренние отступы.</li>
+
+            <li>text-align: Цвет текста.</li>
+            <li>vertical-align: Цвет фона.</li>
+            <li>display: Внешние отступы.</li>
+            <li>border-style: Внутренние отступы.</li>
+
+            <li>border-color: Цвет текста.</li>
+            <li>border-width: Цвет фона.</li>
+            <li>margin: Внешние отступы.</li>
+            <li>padding: Внутренние отступы.</li>
+        </ol>
+        <p>Дополнительно:</p>
+        <ol>
+            <li>px, %, vw, vh, rem, em: Единицы измерения.</li>
+            <li>/* */: Комментарии в CSS.</li>
+        </ol>
+        
+        <!-- КНОПКА СКРИПТА -->
+        <button onclick="toggleStyle()">Вкл / Выкл стиль</button>
+    </main>
+    
+    <!-- ПОДВАЛ -->
+    <footer>
+        <a href="/index.html">Вернуться на главную страницу.</a>
+    </footer>
+    
+    <!-- СКРИПТ -->
+    <script>
+        function toggleStyle() {
+            const style = document.getElementsByTagName("style")[0];
+            style.disabled = !style.disabled;
+        }
+    </script>
+    
+</body></html>
