@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgba(169, 169, 169, 0.31);
+            text-align: center;
+        }
+
+        .product-card {
+            background-color: burlywood;
+            font-family: serif;
+            width: 50vw;
+            max-width: 400px;
+            border-style: solid;
+            border-color: rgba(0, 0, 0, 0.54);
+            border-width: 1.5px;
+            box-shadow: 3px 3px 5px gray;
+            display: inline-block;
+            margin: 5px;
+            transition-duration: 0.5s;
+            transition-property: transform;
+
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card:active {
+            transform: scale(0.95);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+
+        }
+
+        .product-info-row {
+            background-color: antiquewhite;
+            text-align: center;
+            font-size: 24px;
+
+        }
+
+        .product-info {
+            background-color: rgba(222, 184, 135, 0.58);
+            padding: 0px 3px;
+
+        }
+
+        .product-name {
+            display: inline-block;
+            width: 49%;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .product-price {
+            display: inline-block;
+            width: 49%;
+            text-align: right;
+        }
+
+        .prodect-desc {
+            text-align: left;
+        }
+
+        @media (max-width:600px) {
+            .product-card{
+               display: block;
+                width: 100%;
+                margin: 20px auto;
+            }
+            .product-info{
+                width: 100%;
+            }
+            .product-name{
+                display: block;
+                text-align: center;
+                font-size: 24px;
+                width: 100%;
+            }
+            .product-price{
+                display: block;
+                text-align: center;
+                font-size: 24px;
+                width: 100%;
+            }
+            }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="product-card">
+        <img src="https://static.insales-cdn.com/images/products/1/6028/655808396/large_E_PKNP_G.jpg" alt="" class="product-img" draggable="false">
+        <div class="product-info">
+            <div class="product-info-row">
+                <div class="product-name">Серьги</div>
+                <div class="product-price">199 руб.</div>
+            </div>
+
+            <p class="prodect-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, voluptatem.</p>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="https://ae01.alicdn.com/kf/Seb56214b4e1841f696f6e833d1f13eb1q.jpg" alt="" class="product-img" draggable="false">
+        <div class="product-info">
+            <div class="product-info-row">
+                <div class="product-name">Колье</div>
+                <div class="product-price">399 руб.</div>
+            </div>
+
+            <p class="prodect-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, voluptatem.</p>
+        </div>
+    </div>
+</body>
+
+</html>
