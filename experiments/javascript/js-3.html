@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Вход в систему</h1>
+    <input type="text" placeholder="Ваше имя" id="inp1">
+    <button onclick="LogIn()">Войти</button>
+    <p id="log-in-msg"></p>
+
+    <script>
+        var inp1 = document.querySelector("#inp1")
+        var name1 = "Bob"
+        var name2 = "Ben"
+        var p = document.querySelector("#log-in-msg")
+
+        function LogIn() {
+            var result1 = name1 === inp1.value
+            var result2 = name2 === inp1.value
+            console.log(result1, result2)
+            if (result1 === true) {
+                alert("Hello, Bob")
+            }
+            else if (result2 === true) {
+                alert("Hello, Ben")
+            }
+            else {
+                alert("Ошибка")
+            }
+            // p.textContent = result;
+        }
+    </script>
+</body></html>

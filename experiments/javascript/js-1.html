@@ -4,10 +4,57 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+
         button {
             display: block;
-            margin: 20px;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border-style: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px #868686;
+            transition: background-color 0.3s ease;
         }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        #volume, #otvet {
+            font-weight: bold;
+            font-size: 20px;
+            color: #2c3e50;
+        }
+
+        input[type="text"] {
+            display: block;
+            margin: 5px auto 15px;
+            padding: 8px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
     </style>
 </head>
 
@@ -30,6 +77,15 @@
 
 
     <script>
+         var input1 = document.querySelector("#input1")
+        var input2 = document.querySelector("#input2")
+        
+        var otvet = document.querySelector("#otvet")
+        
+        function InpAdd(){
+            
+            otvet.textContent = Number(input1.value) + Number(input2.value);
+        }
         // вывод в консоль
         console.log(1234)
 
@@ -138,14 +194,6 @@
         }
         console.log(document.querySelector("#volume").textContent)
 
-        var input1 = document.querySelector("#input1")
-        var input2 = document.querySelector("#input2")
-        
-        var otvet = document.querySelector("#otvet")
-        
-        function InpAdd(){
-            
-            otvet.textContent = input1.value + input2.value;
-        }
+       
     </script>
 </body></html>
