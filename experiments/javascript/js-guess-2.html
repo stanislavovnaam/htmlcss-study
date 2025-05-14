@@ -34,16 +34,19 @@
             result.textContent = Number(inp1.value) === randInt1
 
             if (inp1.value === "") {
-                result.textContent = "введите число"}
-                 if (Number(inp1.value) === randInt1) {
-                    result.textContent = "в точку"
-                }  if (Number(inp1.value) > randInt1) {
-                    result.textContent = "число меньше"
-                }  if (Number(inp1.value) < randInt1) {
-                    result.textContent = "число больше"
-                }
-
-
+                result.textContent = "введите число"
             }
+            if (Number(inp1.value) === randInt1) {
+                result.textContent = "в точку"
+            }
+            if (Number(inp1.value) > randInt1) {
+                result.textContent = "число меньше"
+            }
+            if (Number(inp1.value) < randInt1) {
+                result.textContent = "число больше"
+            }
+
+
+        }
     </script>
 </body></html>
