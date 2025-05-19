@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: deeppink;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>generator chisel</h3>
+    <p id="randOutput1">...</p>
+
+    <p id="randOut1">...</p>
+    <p id="randOut2">...</p>
+    <p id="randOut3">...</p>
+
+    <input type="text" id="inp1">
+    <button onclick="CheckNum()">check</button>
+    <p id="result">resultat:</p>
+
+
+    <script>
+        var randOutput1 = document.querySelector("#randOutput1")
+
+        var randOut1 = document.querySelector("#randOut1")
+        var randOut2 = document.querySelector("#randOut2")
+        var randOut3 = document.querySelector("#randOut3")
+
+        var inp1 = document.querySelector("#inp1")
+        var result = document.querySelector("#result")
+
+
+        console.log(randOutput1.textContent)
+
+        var randNumb = 1 + Math.random() * 666
+
+        console.log(randNumb)
+
+        randOutput1.textContent = randNumb
+
+        var randInt1 = Math.round(randNumb)
+        randOut1.textContent = randInt1
+
+        var randInt2 = Math.floor(randNumb)
+        randOut2.textContent = randInt2
+
+        var randInt3 = Math.ceil(randNumb)
+        randOut3.textContent = randInt3
+
+        function CheckNum() {
+            result.textContent = Number(inp1.value) === randInt1
+
+            if (Number(inp1.value) === randInt1) {
+                result.textContent = "Good"
+            } else {
+                result.textContent = "bad"
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

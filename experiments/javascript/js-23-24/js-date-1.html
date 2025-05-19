@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Время</h1>
+    <button onclick="showTime()">Показать Время</button>
+    <p id="timeOutput">...</p>
+
+    <button onclick="startTimer()">Начать Таймер</button>
+    <button onclick="stopTimer()">Остановить Таймер</button>
+    <p id="timeOutput2">...</p>
+
+    <script>
+        var startTime = 0
+        
+        function startTimer(){
+            startTime = Date.now()
+        }
+        function stopTimer(){
+            console.log(Date.now() - startTime)
+        }
+        
+        
+        
+        function showTime() {
+            var timeOutput = document.querySelector("#timeOutput")
+
+            var t = Date.now()
+            var seconds = Math.floor(t / 1000)
+            var years = Math.floor(seconds / (60 * 60 * 24 * 365))
+
+            console.log(t)
+            timeOutput.innerText =
+                "ms:" + t +
+                "\n s:" + seconds +
+                "\n years:" + years
+        }
+    </script>
+</body></html>

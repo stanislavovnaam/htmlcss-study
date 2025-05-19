@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgba(220, 20, 60, 0.51);
+        }
+    </style>
+</head>
+<body>
+   <input type="text" id="inp1">
+   <button onclick="GiveValue()">Вывести значение</button>
+    <script>
+    var inp1 = document.querySelector("#inp1")
+    
+    function GiveValue(){
+    console.log(Number(inp1.value) === 5)
+    console.log(5 + 5)    
+    console.log("5" + "5") 
+    console.log(inp1.valu + "text")   
+    }
+    </script>
+</body>
+</html>
