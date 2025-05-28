@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var numList = [5, 7, 2, 9, 1, 0]
+        var maxNum
+
+        var i = 0
+        while (i < numList.length) {
+            if (maxNum === undefined) {
+                maxNum = numList[i]
+            } else if (maxNum < numList[i]) {
+                maxNum = numList[i]
+            }
+            console.log(maxNum, numList[i])
+            i++
+        }
+
+        console.log("Наибольшее число - это", maxNum)
+
+        var wordList = ["Loremi", "ipsum", "doloren", "sit", "amet"]
+
+        var i = 0
+        while (i < wordList.length) {
+            
+            console.log(wordList[i], wordList[i].length)
+            i++
+        }
+    </script>
+</body></html>
