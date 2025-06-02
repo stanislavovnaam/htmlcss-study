@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input">
+    <button onclick="Search()">Поиск</button>
+    <p id="output">...</p>
+
+    <script>
+        var items = ["яблоко", "банан", "машина", "окно", "барабан"]
+
+        function Search() {
+            var output = document.querySelector("#output")
+            var input = document.querySelector("#input")
+
+            var i = 0
+            while (i < items.length) {
+                var word = items[i]
+
+                var j = 0
+                while (j < word.length) {
+                    var k = 0
+                    while (k < input.value.length) {
+                        console.log(word, ":", word[j],"===", input.value[k])
+
+                        k += 1
+                    }
+
+                    j += 1
+
+                }
+                i += 1
+            }
+
+        }
+
+        function ShowItems() {
+
+            var i = 0
+            while (i < items.length) {
+                output.innerHTML += items[i] + "<br>"
+                i += 1
+            }
+        }
+
+        ShowItems()
+    </script>
+</body></html>

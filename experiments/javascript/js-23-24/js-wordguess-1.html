@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Угадай слово</h1>
+    <p id="wordOutput">_</p>
+    <input type="text" id="wordInput">
+    <button onclick="CheckLetters()">Проверить буквы</button>
+
+    <script>
+        function CheckLetters() {
+            var words = ["пайтон", "машина", "программирование", "окно"]
+
+            var wordOutput = document.querySelector("#wordOutput")
+            var wordInput = document.querySelector("#wordInput")
+
+            var index = Math.round(Math.random() * 3)
+
+            var chousenWord = words[index]
+
+            console.log(chousenWord)
+
+
+            var inpValue = wordInput.value
+            var newWord = ""
+
+            var i = 0
+            while (i < chousenWord.length) {
+
+                var j = 0
+                while (j < inpValue.length) {
+                    console.log(inpValue[j], chousenWord[i] === inpValue[j])
+                    j += 1
+                }
+
+
+                /*if (i === 2) {
+                    newWord += "_"
+                } else {*/
+                newWord += chousenWord[i]
+                //}
+
+
+
+                console.log(newWord)
+
+                i += 1
+
+                wordOutput.textContent = newWord
+            }
+        }
+    </script>
+</body></html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Вывести каждый N-й символ</h2>
+    <input type="text" id="text">
+    <input type="text" id="number">
+    <button onclick="Output()">Вывести</button>
+
+    <script>
+        function Output() {
+            var textinp = document.querySelector("#text").value
+            var numberinp = document.querySelector("#number").value
+
+            var i = 0
+            console.log(textinp)
+
+            console.log(textinp[i])
+
+            while (i < textinp.length) {
+                console.log(textinp[i])
+                var step = Number(numberinp)
+                i += step
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>

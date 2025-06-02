@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: deeppink;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Угадай число</h3>
+
+    <input type="text" id="inp1">
+    <button onclick="CheckNum()">check</button>
+    <p id="result">resultat:</p>
+
+
+    <script>
+        var inp1 = document.querySelector("#inp1")
+        var result = document.querySelector("#result")
+
+        var randNumb = 1 + Math.random() * 666
+
+        console.log(randNumb)
+
+        var randInt1 = Math.round(randNumb)
+        var randInt2 = Math.floor(randNumb)
+        var randInt3 = Math.ceil(randNumb)
+
+        function CheckNum() {
+            result.textContent = Number(inp1.value) === randInt1
+
+            if (inp1.value === "") {
+                result.textContent = "введите число"
+            }
+            if (Number(inp1.value) === randInt1) {
+                result.textContent = "в точку"
+            }
+            if (Number(inp1.value) > randInt1) {
+                result.textContent = "число меньше"
+            }
+            if (Number(inp1.value) < randInt1) {
+                result.textContent = "число больше"
+            }
+
+
+        }
+    </script>
+</body></html>

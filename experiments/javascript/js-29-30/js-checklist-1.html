@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="taskInput">
+    <button onclick="AddTask()">Добавить</button>
+
+
+    <script>
+        function AddTask() {
+            var taskInput = document.querySelector("#taskInput")
+            var body = document.querySelector("body")
+
+            if (taskInput.value != "") {
+                body.innerHTML += " <p><input type='checkbox'>" + taskInput.value + "</p>"
+            }
+            taskInput.value = ""
+        }
+    </script>
+</body></html>

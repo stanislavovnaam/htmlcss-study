@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #target {
+            background-color: #ffffff;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            border-width: 20px;
+            border-style: solid;
+            border-color: #ff0000;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="StartGame()">Начать игру</button>
+    <div id="target" onclick="MoveTarget()"> </div>
+    <script>
+        var gameStarted = false
+        var points = 0
+        var startTime
+
+
+
+
+        function StartGame() {
+            startTime = Date.now()
+            console.log(startTime)
+
+            var button = document.querySelector("button")
+
+            if (gameStarted === false) {
+                target.style.display = "block"
+                MoveTarget()
+                gameStarted = true
+            }
+
+            button.style.display = "none"
+        }
+
+        function MoveTarget() {
+            var elapsedTime = Date.now - startTime
+            
+
+            points += 1
+            console.log(points)
+
+            var target = document.querySelector("#target")
+            var targetSize = target.style.width + target.style.borderWidth
+            var randVal1 = Math.random() * (window.innerHeight - 40)
+            var randVal2 = Math.random() * (window.innerWidth - 40)
+
+            console.log(window.getComputedStyle(target).width, window.getComputedStyle(target).borderWidth)
+
+            target.style.top = randVal1 + "px"
+            target.style.left = randVal2 + "px"
+            
+            if(elapsedTime/1000 >= 15){
+                target.style.display = "none"
+                document.querySelector("body").innerHTML = "<p style='width: 100%; text-aline: center;'>" + points + "</p>"
+            }
+        }
+    </script>
+</body></html>
