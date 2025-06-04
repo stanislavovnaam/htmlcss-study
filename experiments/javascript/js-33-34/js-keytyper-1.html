@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="word">...</div>
+    <input type="text" id="input" oninput="CheckInput()">
+    <div id="time">Время: 0 сек.</div>
+    <div id="wpm">Слов в минуту: 0</div>
+
+    <script>
+        var words = ["var", "if", "else", "while", "function", "value", "true", "false", "textContent", "innerHTML", "querySelector", "return", "length"]
+
+        var chosenWord
+        
+        var wordCount = 0
+        
+        var wrongLetterCount = 0
+        var letterCount = 0
+
+        function GetWord() {
+            var wordIndex = Math.floor(Math.random() * words.length)
+            chosenWord = words[wordIndex]
+
+            var wordBox = document.querySelector("#word")
+            wordBox.textContent = chosenWord
+        }
+
+        function UpdateStats() {
+            var elapsedTime = (Date.now() - startTime) / 1000
+            var timeBox = document.querySelector("#time")
+
+            timeBox.textContent = "Время: " + Math.floor(elapsedTime) + " сек."
+            
+            var wpmBox = document.querySelector("#wpm")
+            var minutes = elapsedTime / 60
+            var wpm 
+            
+            wpm = wordCount / minutes
+            
+            wpmBox.textContent = "Слов в минуту: " + Math.floor(wpm)
+            
+            var accuracy
+            accuracy = ((letterCount - wrongLetterCount) / letterCount) * 100
+        }
+
+        function CheckInput() {
+            var inputBox = document.querySelector("#input")
+            var typed = inputBox.value
+
+            if (typed === chosenWord) {
+                console.log("slovo gotovo")
+                GetWord()
+                inputBox.value = ""
+                wordCount++
+            }
+            UpdateStats()
+        }
+
+        var startTime = Date.now()
+
+        GetWord()
+    </script>
+</body></html>

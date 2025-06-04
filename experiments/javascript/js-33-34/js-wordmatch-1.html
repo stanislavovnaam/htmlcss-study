@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Проверка совпадения слов</title>
+</head>
+
+<body>
+    <div id="wordBox"></div>
+    <input type="text" id="userInput" oninput="CompareWord()">
+    <div id="matchResult"></div>
+
+    <script>
+        var words = ["var", "if", "else", "while", "function", "value", "true", "false", "textContent", "innerHTML", "querySelector", "return", "length"]
+
+        var wordBox = document.querySelector("#wordBox")
+        var wordIndex = Math.floor(Math.random() * words.length)
+
+        var matchResult = document.querySelector("#matchResult")
+
+        var chosenWord = words[wordIndex]
+
+        wordBox.textContent = chosenWord
+
+        function CompareWord() {
+            var userInput = document.querySelector("#userInput")
+            var inputWord = userInput.value
+
+            //Простое Сравнение
+            /*
+            console.log(wordBox.textContent === userInput.value)
+             if(wordBox.textContent === userInput.value){
+                 matchResult.textContent = "Сходство есть"
+             }else {
+                 matchResult.textContent = "Сходств нет"
+             }*/
+
+
+            //Логика проверки совпадений %
+            /*
+            abcd и abcd = 100% 
+            ab и abcd = 50%
+            abc и abcd = 75%
+            */
+            
+            var maxLength
+            
+            if(chosenWord.length >= inputWord.length){
+               maxLength = chosenWord.length
+               }else {
+                   maxLength = inputWord.length
+               }
+            
+
+            var correct = 0
+            var i = 0
+            var msg = "Начало цикла \n"
+            while (i < maxLength) {
+                var inpChar = inputWord[i]
+                var choChar = chosenWord[i]
+                
+                if(inpChar === choChar){
+                    correct++
+                }
+                
+                msg += inpChar + "=" + choChar + "; Количество совпадений: " + correct + "\n"
+                i++
+            }
+            console.log(msg)
+            var match = Math.round((correct / maxLength) * 100)
+            matchResult.textContent = "Сходство: " + match + "%"
+        }
+    </script>
+</body></html>
