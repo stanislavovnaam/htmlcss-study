@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: black;
+            color: #ffffff;
+        }
+        img{
+            width: 200px;
+            border-radius: 300px;
+        }
+        
+        img:hover{
+            transform: scale(1.05)
+        }
+        
+        img:active{
+            transform: scale(0.95)
+        }
+    </style>
+</head>
+<body>
+   <h1>Кликер!</h1>
+    <img src="https://idwrap.ru/wp-content/uploads/mercedes-c-class-204-okleyka-teckwrap-idwrap.jpg" alt="" onclick="Onput()">
+    <p></p>
+    
+    <script>
+        var img = document.querySelector("img")
+       
+        var points = localStorage.getItem("clicerPoints")
+        
+    function Onput(){
+        points ++
+        
+        localStorage.setItem("clicerPoints", points)
+        
+        document.querySelector("p").textContent = "Баллы: " + points
+        
+    }
+        document.querySelector("p").textContent = localStorage.getItem("clicerPoints")
+    
+    </script>
+</body>
+</html>
