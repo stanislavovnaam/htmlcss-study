@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .user, .pass {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="username" id="username"> <br>
+    <input type="text" placeholder="password" id="password"><br>
+    <button onclick="SaveAccount()">Сохранить</button>
+    
+    <div id="accountsGallery">
+        <div class="account">
+            <div class="user"></div>
+            <div class="pass"></div>
+        </div>
+    </div>
+    
+    <script>
+    function SaveAccount(){
+        var user = document.querySelector("#username")
+        var pass = document.querySelector("#password")
+        var name = user.value
+        var word = pass.value
+        
+        accountsGallery.innerHTML += `<div class='user'> Имя: ${name}</div>` 
+        accountsGallery.innerHTML += `<div class='pass'> Пароль: ${word}</div> <br> `
+    }
+    </script>
+</body>
+</html>
