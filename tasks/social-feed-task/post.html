@@ -1,0 +1,163 @@
+<!-- Функционал: 
+ - генерирования постов:
+    -имя и фото аккаунта
+    -фото поста
+    -текст поста
+    -лайки, избранное, комменты
+    -время загрузки
+
+Элементы:
+ -пост:
+    -имя и фото аккаунта
+    -фото поста
+    -текст поста
+    -лайки, избранное, комменты
+    -время загрузки
+-Модули:
+     -генерация текста из набоа слов orem ipsum
+     -случайный выбор картинок из готового набора
+     -генерация чисел через Math.random()
+     -генерация времени через Date.now()
+     -создание постов при прокрутке вниз
+     
+    -План выполнения:
+    1. дизайн поста
+    2. скрипт генерации поста
+        2.1 генерация картинок
+            2.1.1 скачать набор(5-10)
+            2.1.2 модуль выбора картинок
+        2.2 генерация теста
+            2.2.1 создать набор слов
+            2.2.2 модуль создания текста
+        2.3 генерация чисел
+        2.4 генерация времени
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post</title>
+    <style>
+        :root {
+            --primary: #59b1d4;
+            --secondary: #cccccc;
+            --tertiary: #ffffff;
+        }
+
+        body {
+            background: linear-gradient(90deg, #d1f1ff, #58bbe3);
+        }
+
+        .post {
+            width: 250px;
+            background-color: var(--primary);
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.25);
+            transition-duration: 0.3s;
+        }
+
+        .post:hover {
+            transform: scale(1.05);
+        }
+
+        .post:active {
+            transform: scale(0.95);
+        }
+
+        .post-account {
+            background-color: var(--secondary);
+            width: 100%;
+            height: 30px;
+            display: flex;
+            padding-bottom: 10px;
+        }
+
+        .post-account-img {
+            background-color: var(--tertiary);
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            margin: 3px;
+            overflow: hidden;
+        }
+
+        .post-account-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .post-account-name {
+            background-color: var(--secondary);
+            width: 80%;
+            height: 30px;
+        }
+
+        .post-photo {
+            background-color: var(--tertiary);
+            width: 100%;
+            height: 170px;
+            overflow: hidden;
+        }
+
+        .post-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .post-info {
+            background-color: var(--secondary);
+            width: 100%;
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="post">
+        <div class="post-account">
+            <div class="post-account-img">
+                <img src="imgs/1670006905_41-kartinkin-net-p-belii-fon-dlya-avi-vkontakte-45.jpg" alt="">
+            </div>
+            <div class="post-account-name"></div>
+        </div>
+        <div class="post-photo">
+            <img src="imgs/4.jpg" alt="">
+        </div>
+        <div class="post-info"></div>
+    </div>
+    
+    <script>
+        var postPhoto = document.querySelector(".post-photo img")
+        console.log(postPhoto)
+        
+        var imgIndex = Math.ceil(Math.random() * 4)
+
+        postPhoto.src = `imgs/${imgIndex}.jpg`
+        
+        //Генерация текста
+        var wordsString = "Lorem ipsum dolor sit amet consectetur adipisicing elit Dicta corporis repudiandae laboriosam enim quod neque"
+        
+        var i = 0
+        var current = 0
+        var target = Math.ceil(Math.random() * 14)
+        var word = ""
+        
+        while(i < wordsString.length){
+            word += wordsString[i]
+            if(wordsString[i] === " "){
+                current += 1
+            }
+            if(current >= target){
+                break
+            }else if (wordsString[i] === " ") {
+                word = ""
+            }
+            i++
+        }
+        console.log(word, current, target)
+    </script>
+</body></html>
